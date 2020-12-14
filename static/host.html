@@ -1,0 +1,93 @@
+<html>
+<head>
+  <title>A Multiplayer Game</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/host.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="RPboxContainer">
+    <center>
+      <div id="roomIDBox">
+        <p id="roomIDText"></p>
+      </div>
+      <div id="playerListBox">
+        <h1>Players in room</h1>
+        <div id="Players">
+        </div>
+      </div>
+    </center>
+  </div>
+
+  <div id="playersPointsBar">
+    <div id="playersAndPoints">
+      <p id="P1Color">No players</p>
+    </div>
+  </div>
+
+  <div id="questionBox">
+    <label>Question</label>
+    <input type="text" id="question" name="question" maxlength="100" size="80">
+    <br>
+    <input type="button" id="ask" name="start" value="Ask question" onclick="askQuestion();">
+    <input type="button" id="choice" name="start" value="Choice round" onclick="startCoiceRound();">
+    <input type="button" id="box" name="start" value="Box round" onclick="startBoxRound();">
+  </div>
+
+  <div id="choiceRoundBox" class="gameBox">
+    <div id="choiceRoundQBox">
+      <p id="choiceRoundQ"><span id="QPart1"></span><span id="gold"></span><span id="QPart2"></span></p>
+    </div>
+    <div id="choiceRoundABoxes">
+      <div id="choiceRoundAns1Box">
+      </div>
+      <div id="choiceRoundA1Box">
+        <p id="choiceRoundA1Text">Test</p>
+      </div>
+      <div id="choiceRoundA2Box">
+        <p id="choiceRoundA2Text">Andere test</p>
+      </div>
+      <div id="choiceRoundAns2Box">
+      </div>
+    </div>
+    <div id="choiceRoundTimerBox"></div>
+  </div>
+
+  <div id="giveBox" onclick="nextRound();">
+    <p id="giveBoxTitle">YOU MAY GIVE OUT <span id="giveBoxAmount"></span> SIPS!</p>
+    <div id="giveBoxPeople">
+    </div>
+  </div>
+
+  <div id="punishBox" onclick="nextRound();">
+    <p id="punishBoxTitle">YOU HAVE TO TAKE <span id="punishBoxAmount"></span> SIPS!</p>
+    <div id="punishBoxPeople">
+    </div>
+  </div>
+
+  <div id="boxesRoundBox" class="gameBox">
+    <p id="boxesRoundBoxTitle">CHOOSE A BOX</p>
+    <p id="boxesRoundBoxSubTitle">IF YOU'RE THE ONLY ONE ON A BOX YOU WILL <span id="greenText">EARN</span> THAT AMOUNT OF POINTS<br/>
+      IF NOT, YOU WILL <span id="redText">LOSE</span> THAT AMOUNT OF POINTS</p>
+      <div id="BoxesRoundBoxes">
+      </div>
+    </div>
+
+    <div id="highLowRoundBox" class="gameBox">
+      <p id="highLowRoundTitle">HIGHER OR LOWER</p>
+      <p id="highLowRoundSubTitle"><span id="gold">EARN</span> 1 POINT FOR EVERY GOOD GUESS, CHOOSE STOP TO GET YOUR POINTS<br/>
+        IF YOU GUESS INCORRECTLY YOU WILL <span id="redText">LOSE</span> YOUR POINTS</p>
+        <div id="highLowCenter">
+          <div id="highLowBoxes">
+            <div id="higherBox"><p>HIGHER</p></div>
+            <div id="lowerBox"><p>LOWER</p></div>
+          </div>
+          <div id="currentNumberBox"></div>
+          <div id="stopBox"><p>STOP</p></div>
+        </div>
+      </div>
+
+    </body>
+    <script src="/static/host.js"></script>
+    </html>

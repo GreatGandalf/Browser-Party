@@ -1,0 +1,141 @@
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+}
+
+#JCboxContainer {
+  border: 2px solid black;
+  width: 20%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#joinRoomBox {
+
+}
+
+#createRoomBox {
+  float: right;
+}
+
+#choiceRoundChooser {
+  display: none;
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+}
+
+#Choice1Box {
+  position: fixed;
+  left: 0px;
+  height: 100%;
+  width: 50%;
+  background-color: rgb(41, 128, 185);
+}
+
+#Choice2Box {
+  position: fixed;
+  right: 0px;
+  height: 100%;
+  width: 50%;
+  background-color: rgb(231, 76, 60);
+}
+
+#boxRoundChooser {
+  display: none;
+  width: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#boxRoundBox {
+  width: 30vw;
+  height: 30vw;
+  background-color: #1C2A39;
+  border-radius: 2%;
+  display: inline-block;
+  margin: 1.6vw;
+}
+
+#boxRoundBox p {
+  font-size: 20vw;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.boxRoundEmptyBox {
+  background-color: #404040 !important;
+}
+
+.boxRoundSelectedBox {
+  background-color: #16A085 !important;
+}
+
+#boxRoundSelect {
+  display: none;
+  background-color: #7F8C8D;
+  position: fixed;
+  bottom: 0px;
+  left: 0px;
+  width: 100%;
+  height: 10%;
+}
+
+#boxRoundSelect p {
+  font-size: 7vw;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#highLowChooser {
+  display: none;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+#highLowChooser div p {
+  font-size: 7vw;
+  color: white;
+  position: relative;
+  text-align: center;
+  margin: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#higherBox {
+  width: 100%;
+  height: 33.3%;
+  background-color: #16A085;
+}
+
+#lowerBox {
+  width: 100%;
+  height: 33.3%;
+  background-color: #C0392B;
+}
+
+#stopBox {
+  width: 100%;
+  height: 33.3%;
+  background-color: #2980B9;
+}

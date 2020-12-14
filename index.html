@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>A Multiplayer Game</title>
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div id="JCboxContainer">
+    <div id="joinRoomBox">
+      <label>Username</label>
+      <input type="text" id="userName" name="userName" minlength="3" maxlength="20" size="20">
+      <br>
+      <label>Room ID</label>
+      <input type="text" id="roomID" name="roomID" minlength="5" maxlength="5" size="20">
+      <br>
+      <input type="button" id="start" name="start" value="Join" onclick="join();">
+    </div>
+    <div id="createRoomBox">
+      <input type="button" id="create" name="start" value="Create" onclick="create();">
+    </div>
+  </div>
+
+  <div id="choiceRoundChooser">
+    <div id="Choice1Box" onclick="choice1();">
+
+    </div>
+    <div id="Choice2Box" onclick="choice2();">
+
+    </div>
+  </div>
+
+  <div id="boxRoundChooser">
+  </div>
+  <div id="boxRoundSelect" onclick="confirmSelectedBox();">
+    <p>TAKE THIS BOX</p>
+  </div>
+
+  <div id="highLowChooser">
+    <div id="higherBox" onclick="chooseHigher();"><p>HIGHER</p></div>
+    <div id="lowerBox" onclick="chooseLower();"><p>LOWER</p></div>
+    <div id="stopBox" onclick="chooseStop();"><p>STOP</p></div>
+  </div>
+
+</body>
+<script src="/static/game.js"></script>
+</html>
